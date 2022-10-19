@@ -16,7 +16,10 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "echo 'No e2e tests implemented yet.'"
+    "test:e2e": "echo 'No e2e tests implemented yet.'",
+    "migration:generate": "ts-node ./node_modules/typeorm/cli.js  migration:generate -n",
+    "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
+    "migration:create": "ts-node ./node_modules/typeorm/cli.js migration:create -n"
   },
   "dependencies": {
     "@nestjs/common": "9.0.1",
