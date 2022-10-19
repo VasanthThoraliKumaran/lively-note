@@ -1,0 +1,15 @@
+{
+"type": "mysql",
+"host": "{{ db.host }}",
+"port": {{ db.port }},
+"username": "{{ db.username }}",
+"password": "{{ db.password }}",
+"database": "{{ db.name }}",
+"entities": ["src/**/.entity{.ts,.js}"],
+"synchronize": false,
+"migrations":["src/migration/.ts"],
+"migrationsTableName": "migrations",
+"cli": {
+"migrationsDir": "src/migration"
+}
+}
